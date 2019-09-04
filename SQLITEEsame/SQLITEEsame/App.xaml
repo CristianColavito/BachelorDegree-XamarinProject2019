@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLITEEsame.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="AirbnbBook"
+                        x:TypeArguments="x:String"
+                        iOS="AirbnbCereal-Book"
+                        Android="AirbnbCereal-Book.ttf#Airbnb"/>
+
+            <OnPlatform x:Key="AirbnbBold"
+                        x:TypeArguments="x:String"
+                        iOS="AirbnbCereal-Bold"
+                        Android="AirbnbCereal-Bold.ttf#Airbnb"/>
+
+            <Style x:Key="AirbnbBookLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="FontFamily"
+                        Value="StaticResource AirbnbBook"/>
+            </Style>
+            <Style x:Key="AirbnbBoldLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="FontFamily"
+                        Value="StaticResource AirbnbBold"/>
+            </Style>
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

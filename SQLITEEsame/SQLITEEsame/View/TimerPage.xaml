@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             x:Class="SQLITEEsame.View.TimerPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+                <Label 
+                    Style="{StaticResource AirbnbBoldLabelStyle}" 
+                    x:Name="MyScheda"
+                    HorizontalTextAlignment="Center" 
+                    AbsoluteLayout.LayoutBounds=".5,150,1,40" 
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"  
+                    FontSize="Medium"/>
+                <Label 
+                    Style="{StaticResource AirbnbBoldLabelStyle}" 
+                    x:Name="MyRipetizioni"
+                    HorizontalTextAlignment="Center" 
+                    AbsoluteLayout.LayoutBounds=".5,170,1,40" 
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"  
+                    FontSize="Small"/>
+                <AbsoluteLayout 
+                    AbsoluteLayout.LayoutBounds="0,200,1,300" 
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+                    <control:ProgressRing 
+                        RingThickness="15" 
+                        x:Name="progressRing"
+                        RingProgressColor="Accent"/>
+                    <Button  x:Name="bottone" 
+                         Text="tap to start"
+                         FontSize="Micro"
+                         Clicked="Startandstop" 
+                         AbsoluteLayout.LayoutBounds=".5,.85,120,120" 
+                         AbsoluteLayout.LayoutFlags="XProportional,YProportional" 
+                         BorderRadius="90"
+                         BackgroundColor="Accent"/>
+                    <Label x:Name="MyTime"  
+                           Style="{StaticResource AirbnbBookLabelStyle}"  
+                           HorizontalTextAlignment="Center" 
+                           FontSize="32" 
+                           AbsoluteLayout.LayoutBounds=".5,.25,.25,.25" 
+                           AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+                <Label Style="{StaticResource AirbnbBookLabelStyle}" 
+                       x:Name="MyRec" 
+                       HorizontalOptions="Center" 
+                       Margin="20,20" 
+                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                       AbsoluteLayout.LayoutFlags="SizeProportional"/>
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

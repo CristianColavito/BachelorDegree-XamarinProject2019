@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLITEEsame.View.ItemListView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ListviewItems" ItemsSource="{Binding .}" ItemTapped="Handle_ItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" 
+                                          Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal" Padding="15,10" HorizontalOptions="FillAndExpand">
+                                <Label HorizontalOptions="Start" VerticalTextAlignment="Center" Style="{StaticResource AirbnbBookLabelStyle}" FontSize="Medium" Text="{Binding SchedaName} "/>
+                            </StackLayout>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+            <Button Text="Inserisci allenamento" Clicked="AddAllenamento"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
